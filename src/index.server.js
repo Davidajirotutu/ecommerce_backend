@@ -24,7 +24,7 @@ env.config();
 //mongodb+srv://root:<password>@cluster0.8pl1w.mongodb.net/<dbname>?retryWrites=true&w=majority
 mongoose
   .connect(
-    `mongodb+srv://david:Titilope81@cluster0.8ejfc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
+    `mongodb+srv://{process.env.MONGO_DB_USER}:{process.env.MONGO_DB_PASSWORD}@cluster0.8ejfc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
     //const dbURI = `mongodb+srv://${process.env.MONGO_DB_USER}:${process.env.MONGO_DB_PASSWORD}@cluster0.8ejfc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
     {
       useNewUrlParser: true,
